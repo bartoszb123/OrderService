@@ -1,0 +1,9 @@
+ctr+alt+m - stworz metode z zaznaczonego kodu!!!!
+ctr+alt+l  - reformat codu
+alt+insert - stworz get,set,konstruktor itd
+alt+enter -  import library
+ctrl + F12 - wszystkie metody w klasie
+ctr + o - overiding methods (nadpisanie metod z klasy po ktorej dziedziczymy)
+sout - System.out.println();
+ctrl+alt+o - usuniecie nieuzywanych importow.
+ctrl + i - dodanie implementacji

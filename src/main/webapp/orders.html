@@ -1,0 +1,50 @@
+<!DOCTYPE HTML >
+<html style="background-color:#F6F6F6">
+<head>
+    <title>Orders</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/orders-styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.12.1/bootstrap-table.min.js"></script>
+    <script type="text/javascript" src="js/load.js"></script>
+
+
+</head>
+<body>
+<div class="se-pre-con"></div>
+<div class="container">
+
+    <div align="center" class="box">
+        <h1 style="background-color:#cdcde3;padding:20px;">Złożone zamówienia:</h1>
+
+        <div id="doc"></div>
+
+    </div>
+</div>
+<br/><br/>
+
+<hr/>
+<!--<table id="table" data-pagination="true" data-page-list="[5, 10, 20, 50, 100, 200]" data-search="true" data-toggle="table" >-->
+<table id="table" data-pagination="true" data-page-list="[5, 10, 20, 50]" data-search="true">
+    <thead>
+    <tr>
+        <!--<th data-field="ID" data-sortable="true">ID</th>-->
+        <th data-field="clientId" data-sortable="true">Client ID</th>
+        <th data-field="requestId" data-sortable="true">Request ID</th>
+        <th data-field="name" data-sortable="true">Name</th>
+        <th data-field="quantity" data-sortable="true">Quantity</th>
+        <th data-field="price" data-sortable="true">Price</th>
+    </tr>
+    </thead>
+</table>
+
+<div>
+    <a href='http://localhost:8081/orderservice/index.html' class="btn btn-primary">Wróć</a>
+    <a href='http://localhost:8081/orderservice/dupaaaaaa' class="btn btn-primary">Dodaj</a>
+</div>
+
+</body>
+
+</html>

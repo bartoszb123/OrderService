@@ -1,0 +1,30 @@
+<requests>
+    <request>
+        <clientId>4</clientId>
+        <requestId>3</requestId>
+        <name>Bułka</name>
+        <quantity>1</quantity>
+        <price>13.00</price>
+    </request>
+    <request>
+        <clientId>3</clientId>
+        <requestId>5</requestId>
+        <name>Mleko</name>
+        <quantity>5</quantity>
+        <price>5.00</price>
+    </request>
+    <request>
+        <clientId>1</clientId>
+        <requestId>2</requestId>
+        <name>Pomidor</name>
+        <quantity>5</quantity>
+        <price>35.00</price>
+    </request>
+    <request>
+        <clientId>7</clientId>
+        <requestId>1</requestId>
+        <name>Ogorki</name>
+        <quantity>2</quantity>
+        <price>11.00</price>
+    </request>
+</requests>
