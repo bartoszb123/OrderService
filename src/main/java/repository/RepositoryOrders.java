@@ -16,7 +16,7 @@ public class RepositoryOrders {
     private String name;
     private int quantity;
     private double price;
-
+    private String timestamp;
 //    private Connection conn = ConnectionPool.getInstance().getConnection();
 
     private static List<Orders> listOrders = new ArrayList<Orders>();
@@ -41,12 +41,15 @@ public class RepositoryOrders {
                 name = rs.getString("name");
                 quantity = rs.getInt("quantity");
                 price = rs.getDouble("price");
+                timestamp = rs.getString("timestmp");
                 listOrders.add(new Orders.OrderBuilder()
                         .buildClientId(clientId)
                         .buildRequestId(requestId)
                         .buildName(name)
                         .buildQuantity(quantity)
-                        .buildPrice(price).build()
+                        .buildPrice(price)
+                        .buildTimeStmp(timestamp)
+                        .build()
                 );
             }
             rs.close();
@@ -105,6 +108,8 @@ public class RepositoryOrders {
                     + "name VARCHAR(25) NOT NULL DEFAULT '',"
                     + "quantity INT NOT NULL DEFAULT '',"
                     + "price DECIMAL(7,2) NOT NULL DEFAULT '0.00',"
+//                    + "DateCreated DATETIME NOT NULL DEFAULT(GETDATE()),"
+                    + "timestmp TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,"
                     + "PRIMARY KEY (ID));";
 
             stmt.executeUpdate(createTable);

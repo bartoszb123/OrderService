@@ -1,6 +1,7 @@
 package model;
 
 import javax.xml.bind.annotation.*;
+import java.sql.Timestamp;
 
 @XmlRootElement(name = "request")
 //@XmlType(propOrder = {"clientId", "requestId", "name", "quantity", "price"})
@@ -23,6 +24,7 @@ public class Orders {
 
     private double price;
 
+    private String timestamp;
 
     public Orders(OrderBuilder orderBuilder) {
         this.clientId = orderBuilder.clientId;
@@ -30,6 +32,7 @@ public class Orders {
         this.name = orderBuilder.name;
         this.quantity = orderBuilder.quantity;
         this.price = orderBuilder.price;
+        this.timestamp=orderBuilder.timestamp;
     }
     public Orders(){}
 
@@ -81,6 +84,14 @@ public class Orders {
         this.price = price;
     }
 
+    public String getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(String timestamp) {
+        this.timestamp = timestamp;
+    }
+
     @Override
     public String toString() {
         return "Orders {" +
@@ -99,7 +110,7 @@ public class Orders {
         private String name;
         private int quantity;
         private double price;
-
+        private String timestamp;
 
        public OrderBuilder buildClientId(String clientId){
            this.clientId=clientId;
@@ -120,6 +131,11 @@ public class Orders {
         }
         public OrderBuilder buildPrice(double price){
             this.price=price;
+            return this;
+        }
+
+        public OrderBuilder buildTimeStmp(String timestamp){
+            this.timestamp=timestamp;
             return this;
         }
 
